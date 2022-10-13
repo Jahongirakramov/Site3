@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(151, 143, 143);
+}
+form{
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 50px;
+    position: relative;
+}
+label, input{
+    display: block;
+}
+input{
+    border: none;
+    border-bottom: 1px solid #333;
+    width: 80%;
+    padding: 5px;
+    font-size: 20px;
+    background-color: transparent;
+    position: relative;
+}
+input:focus{
+    outline: none;
+}
+label{
+    position: absolute;
+    top: 55px;
+    left: 5px;
+    transition: .3s;
+}
+input:focus ~ label{
+    top: 38px;
+    font-size: 12px;
+    color: aqua;
+}
+input:valid~ label{
+    top: 38px;
+    font-size: 12px;
+    color: aqua;
+}
+span{
+    width: 0%;
+    height: 1px;
+    background-color: aqua;
+    position: absolute;
+    bottom: 0;
+    transition: .5s;
+    z-index: 10;
+}
+input:focus ~ span{
+    width: 80%;
+}
